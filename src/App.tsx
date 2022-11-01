@@ -4,13 +4,18 @@ import DialogBox from "./components/DialogBox/DialogBox";
 import Clock from "./components/Clock/Clock";
 import { Counter } from "./components/Counter/Counter";
 
+interface DialogMessage {
+  title?: string;
+  message?: string;
+}
+
 function App() {
   const [isOpenDialogBox, setOpenDialogBox] = React.useState(false);
   const handleOpen = () => setOpenDialogBox(true);
   const handleClose = () => setOpenDialogBox(false);
 
-  const [type, setType] = React.useState();
-  const [dialogMessage, setDialogMessage] = React.useState();
+  const [type, setType] = React.useState('');
+  const [dialogMessage, setDialogMessage] = React.useState<DialogMessage>({});
 
   const openInfoDialogBox = () => {
     setType('info');
