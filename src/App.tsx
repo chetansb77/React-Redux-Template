@@ -50,7 +50,7 @@ function App() {
           onCloseCallback={handleClose}
         />
       )}
-      <Clock />
+      <Clock timeType='short' />
       <Counter />
     </div>
   );
