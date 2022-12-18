@@ -1,8 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Header } from './Header';
+import Header, { HeaderProps } from './Header';
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'Example/Header',
   component: Header,
@@ -12,7 +13,8 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+// eslint-disable-next-line react/function-component-definition, react/jsx-props-no-spreading
+const Template: ComponentStory<typeof Header> = (args: HeaderProps) => <Header {...args} />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {

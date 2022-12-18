@@ -1,8 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { within, userEvent } from '@storybook/testing-library';
-import { Page } from './Page';
+import Page from './Page';
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'Example/Page',
   component: Page,
@@ -12,7 +13,8 @@ export default {
   },
 } as ComponentMeta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+// eslint-disable-next-line react/function-component-definition, react/jsx-props-no-spreading
+const Template: ComponentStory<typeof Page> = () => <Page />;
 
 export const LoggedOut = Template.bind({});
 
