@@ -2,7 +2,7 @@ type ITimeZone = Record<string, string>;
 
 // Fill in the supported time zones with zone code
 const timeZoneOffsets: ITimeZone = {
-  IST: '+5.5',
+  IST: "+5.5",
 };
 
 const calcTime = (timezone: string): Date => {
@@ -18,8 +18,9 @@ const calcTime = (timezone: string): Date => {
   // using supplied offset
   const nd = new Date(utc + 3600000 * Number(timeZoneOffsets[timezone]));
 
-  // return time as a string
+  // return date object
   return nd;
 };
 
 export default calcTime;
+export { timeZoneOffsets };

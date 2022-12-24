@@ -2,31 +2,31 @@ import counterReducer, {
   increment,
   decrement,
   incrementByAmount,
-} from './counterSlice';
+} from "./counterSlice";
 
-describe('counter reducer', () => {
+describe("counter reducer", () => {
   const initialState = {
     value: 3,
-    status: 'idle',
+    status: "idle",
   };
-  test('should handle initial state', () => {
-    expect(counterReducer(undefined, { type: 'unknown' })).toEqual({
+  test("should handle initial state", () => {
+    expect(counterReducer(undefined, { type: "unknown" })).toEqual({
       value: 0,
-      status: 'idle',
+      status: "idle",
     });
   });
 
-  test('should handle increment', () => {
+  test("should handle increment", () => {
     const actual = counterReducer(initialState, increment());
     expect(actual.value).toEqual(4);
   });
 
-  test('should handle decrement', () => {
+  test("should handle decrement", () => {
     const actual = counterReducer(initialState, decrement());
     expect(actual.value).toEqual(2);
   });
 
-  test('should handle incrementByAmount', () => {
+  test("should handle incrementByAmount", () => {
     const actual = counterReducer(initialState, incrementByAmount(2));
     expect(actual.value).toEqual(5);
   });

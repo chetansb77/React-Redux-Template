@@ -20,6 +20,10 @@
         "react"
     ],
     "rules": {
+        "quotes": ["error", "double", { "avoidEscape": true }],
+        "@typescript-eslint/quotes": ["error", "double", { "avoidEscape": true }],
+        "indent": ["error", 2],
+        "@typescript-eslint/indent": ["error", 2],
         "linebreak-style": "off",
         "react/require-default-props": "off",
         "react/no-unescaped-entities": "off",
