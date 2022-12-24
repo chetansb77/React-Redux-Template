@@ -77,6 +77,6 @@ function Page(): JSX.Element {
       </section>
     </article>
   );
-};
+}
 
 export default Page;
