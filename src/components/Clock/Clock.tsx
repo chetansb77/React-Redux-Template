@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import calcTime from "./regionTime";
 
 interface ClockProps {
-  timeType?: "long" | "short"
-  regionCode?: string
+  timeType?: "long" | "short";
+  regionCode?: string;
 }
 
-function Clock({ timeType = "short", regionCode = "IST" }: ClockProps): JSX.Element {
+function Clock({
+  timeType = "short",
+  regionCode = "IST",
+}: ClockProps): JSX.Element {
   const [time, setTime] = useState(calcTime(regionCode));
 
   useEffect(() => {

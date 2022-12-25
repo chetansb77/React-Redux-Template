@@ -1,34 +1,34 @@
-import * as React from 'react';
+import * as React from "react";
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
 
 const style = (type: string): any => {
   switch (type) {
-    case 'info': {
+    case "info": {
       return {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
         width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
+        bgcolor: "background.paper",
+        border: "2px solid #000",
         boxShadow: 24,
         p: 4,
       };
     }
-    case 'warning': {
+    case "warning": {
       return {
-        position: 'absolute',
-        color: 'red',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        position: "absolute",
+        color: "red",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
         width: 400,
-        bgcolor: 'background.paper',
-        border: '4px solid red',
+        bgcolor: "background.paper",
+        border: "4px solid red",
         boxShadow: 24,
         p: 4,
       };
@@ -41,14 +41,14 @@ const style = (type: string): any => {
 };
 
 interface DialogMessage {
-  title?: string
-  message?: string
+  title?: string;
+  message?: string;
 }
 
 interface DialogBoxProps {
-  type: string
-  message: DialogMessage
-  onCloseCallback: () => any
+  type: string;
+  message: DialogMessage;
+  onCloseCallback: () => any;
 }
 
 /**
@@ -65,7 +65,11 @@ interface DialogBoxProps {
 }
 * @prop {function} onCloseCallback - Callback function on close
 */
-function DialogBox({ type, message, onCloseCallback }: DialogBoxProps): JSX.Element {
+function DialogBox({
+  type,
+  message,
+  onCloseCallback,
+}: DialogBoxProps): JSX.Element {
   return (
     <Modal
       open
