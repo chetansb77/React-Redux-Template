@@ -5,6 +5,7 @@ interface ErrorProps {
   errorMessage: string;
 }
 
+// TODO: Support for showing actual error message toggle
 function Error({
   errorMessage = "Ooops!! Something went wrong :(",
 }: ErrorProps): JSX.Element {
