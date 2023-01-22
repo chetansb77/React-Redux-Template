@@ -7,3 +7,5 @@ The main file (usually labelled `main.scss`) should be the only Sass file from t
 Reference: [Sass Guidelines](https://sass-guidelin.es/) > [Architecture](https://sass-guidelin.es/#architecture) > [Main file](https://sass-guidelin.es/#main-file)
 
 Design System: [Pixelmatters](https://www.figma.com/community/file/1055785285964148921)
+
+Emoji Icons: [emoji.gg](https://emoji.gg/)
