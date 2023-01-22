@@ -1,0 +1,9 @@
+.error-component {
+  img {
+    @include elementStyle('img');
+  }
+
+  .message {
+    @include elementStyle('p');
+  }
+}
