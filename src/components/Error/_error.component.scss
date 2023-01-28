@@ -1,3 +1,5 @@
+@import '../../assets/stylesheets/base/colors';
+
 .error-component {
   img {
     @include elementStyle('img');
@@ -5,5 +7,6 @@
 
   .message {
     @include elementStyle('p');
+    color: $neutral600;
   }
 }

@@ -1,8 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import DialogBox, { DialogMessage } from "./components/DialogBox/DialogBox";
-import Clock from "./components/Clock/Clock";
-import Counter from "./components/Counter/Counter";
+import DialogBox, { DialogMessage } from "./components/DialogBox";
+import Clock from "./components/Clock";
 
 function App(): JSX.Element {
   const [isOpenDialogBox, setOpenDialogBox] = React.useState(false);
@@ -46,7 +45,6 @@ function App(): JSX.Element {
         />
       )}
       <Clock timeType="short" />
-      <Counter />
     </div>
   );
 }
