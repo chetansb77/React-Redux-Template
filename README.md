@@ -52,8 +52,34 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Code Quality : Sonarqube
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Setup Steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Prerequisites
+  - Docker
+  - Docker-Compose
+- Compose sonarqube : `npm run compose-up-sonarqube`
+- Sonarqube client should be running on <http://localhost:9000/>
+- Following steps are only for the first time
+  - Login using the following creds
+    - username - `admin`
+    - password - `admin`
+  - Update a new password
+  - Click on `Add a project` on the dashboard
+  - Provide a project key and project name
+  - Update the names of the `projectName` and `projectKey` in `./sonarqube/sonarscan.js`
+  - Generate a token
+  - Copy the token and update the `token` key value in `./sonarqube/sonarscan.js`
+  - Run Scan : `npm run sonarqube-scan`
+  - Dashboard will be updated
+
+### Available Sonarqube Scripts
+
+- `npm run compose-up-sonarqube` : Docker compose starts a sonarqube container service
+
+- `npm run compose-down-sonarqube` : Removes the sonarqube container service
+
+- `npm run stop-sonarqube` : Stops the sonarqube container service
+
+- `npm run sonarqube-scan` : For starting a new scan.

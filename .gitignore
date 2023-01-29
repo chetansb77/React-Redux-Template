@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+# Code-Quality
+.scannerwork
+sonarqube/extensions
+sonarqube/data
+sonarqube/logs
+
 # production
 /build
 
